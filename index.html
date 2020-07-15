@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>黄宇的Topbar</title>
     <link rel="stylesheet" href="./main.css">
     <script src="//at.alicdn.com/t/font_975781_5yppuy51b4s.js"></script>
     <style type="text/css">
-.loading{ width: 200px;height: 200px;position: relative;}
-  
-.loading::before,.loading::after{content: '';position: absolute;height: 10px;width: 10px;background: black;border-radius: 50%;top: 0px;bottom: 0px;
-left: 0px;
-right: 0px;
-margin: auto;
-animation: s 1.5s linear infinite;
-}
-  
-.loading::after{animation-delay: 0.75s;}
-  
-  @keyframes s{
-    0%{
-      width: 0px;height: 0px;opacity: 1;
-    }
-    100%{
-      width: 100px;height: 100px;opacity: 0;
-    }
-  }
-  
-        .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
         }
-        .site-welcome{
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            background: black;
+            border-radius: 50%;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            animation: s 1.5s linear infinite;
+        }
+
+        .loading::after {
+            animation-delay: 0.75s;
+        }
+
+        @keyframes s {
+            0% {
+                width: 0px;
+                height: 0px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .site-welcome {
             display: none;
             position: fixed;
-            top: 0;left: 0;width: 100%;height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: #888;
             z-index: 1;
             justify-content: center;
             align-items: center;
         }
-        .site-welcome.active{
+
+        .site-welcome.active {
             display: flex;
         }
     </style>
@@ -50,39 +77,39 @@ animation: s 1.5s linear infinite;
     <div id="siteWelcome" class="site-welcome active">
         <div class="loading"></div>
     </div>
-    
+
     <div class="topNavBar">
         <div class="topNavBar-inner clearfix">
-                <a class="logo" href="#" alt="logo" style="float: left;">
-                        <span class="rs">RS</span><span class="card">card</span>
-                       </a>
-                       <nav style="float: right;">
-                           <ul class="clearfix">
-                               <li>
-                               <a href="#">关于</a>
-                               </li>
-                               <li>
-                               <a href="#">技能</a>
-                               </li>
-                               <li>
-                               <a href="#">作品</a>
-                               </li>
-                               <li>
-                               <a href="#">博客</a>
-                               </li>
-                               <li>
-                               <a href="#">日历</a>
-                               </li>
-                               <li>
-                               <a href="#">联系方式</a>
-                               </li>
-                               <li>
-                               <a href="#">其他</a>
-                               </li>
-                           </ul>
-                       </nav>
+            <a class="logo" href="#" alt="logo" style="float: left;">
+                <span class="rs">RS</span><span class="card">card</span>
+            </a>
+            <nav style="float: right;">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">关于</a>
+                    </li>
+                    <li>
+                        <a href="#">技能</a>
+                    </li>
+                    <li>
+                        <a href="#">作品</a>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                    </li>
+                    <li>
+                        <a href="#">日历</a>
+                    </li>
+                    <li>
+                        <a href="#">联系方式</a>
+                    </li>
+                    <li>
+                        <a href="#">其他</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        
+
     </div>
     <div class="banner" style="">
         <div class="mask"></div>
@@ -94,22 +121,22 @@ animation: s 1.5s linear infinite;
                     <img src="./image/avatar.jpg" width="299" height="347" alt="头像">
                 </div>
                 <div class="text">
-                        <span class="welcome">Hello
-                            <span class="triangle"></span>
-                        </span>
-                        <h1>黄宇</h1>
-                        <p>前端开发工程师</p>
-                        <hr>
-                        <dl>
-                            <dt>年龄</dt>
-                            <dd>23</dd>
-                            <dt>所在城市</dt>
-                            <dd>重庆</dd>
-                            <dt>邮箱</dt>
-                            <dd>huangyu9673@gmail.com</dd>
-                            <dt>手机</dt>
-                            <dd>15751757595</dd>
-                        </dl>
+                    <span class="welcome">Hello
+                        <span class="triangle"></span>
+                    </span>
+                    <h1>黄宇</h1>
+                    <p>前端开发工程师</p>
+                    <hr>
+                    <dl>
+                        <dt>年龄</dt>
+                        <dd>23</dd>
+                        <dt>所在城市</dt>
+                        <dd>重庆</dd>
+                        <dt>邮箱</dt>
+                        <dd>huangyu9673@gmail.com</dd>
+                        <dt>手机</dt>
+                        <dd>15751757595</dd>
+                    </dl>
                 </div>
             </div>
             <footer class="media">
@@ -144,51 +171,51 @@ animation: s 1.5s linear infinite;
 
             <a href="./resume.pdf" class="downloadResume" target="_blank" download>下载PDF简历</a>
         </p>
-        <p class="selfIntroduction"> 
+        <p class="selfIntroduction">
             黄宇，前端开发工程师
             <br>技能：前端开发，Node.js开发，Vue.js开发
         </p>
     </main>
     <section class="skills">
         <h2>技能</h2>
-            <ol class="clearfix">
-                <li>
-                    <h3>HTML 5 &amp; CSS 3</h3>
+        <ol class="clearfix">
+            <li>
+                <h3>HTML 5 &amp; CSS 3</h3>
                 <div class="progressBar">
                     <div class="progress" style="width:80%"></div>
                 </div>
-                </li>
-                <li>
-                    <h3>Javascript</h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width:94%"></div>
-                    </div>
-                </li>
-                <li>
-                    <h3>jQuery</h3>
+            </li>
+            <li>
+                <h3>Javascript</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:94%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>jQuery</h3>
                 <div class="progressBar">
                     <div class="progress" style="width:60%"></div>
                 </div>
-                </li>
-                <li>
-                    <h3>Vue.js</h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width:70%"></div>
-                    </div>
-                </li>
-                <li>
-                    <h3>React.js</h3>
-                    <div class="progressBar">
-                        <div class="progress" style="width:78%"></div>
-                    </div>
-                    </li>
-                <li>
-                    <h3>Node.js</h3>
+            </li>
+            <li>
+                <h3>Vue.js</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:70%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>React.js</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:78%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Node.js</h3>
                 <div class="progressBar">
                     <div class="progress" style="width:85%"></div>
                 </div>
-                </li>
-            </ol>
+            </li>
+        </ol>
     </section>
     <section class="portfolio">
         <h2>作品集</h2>
@@ -203,13 +230,13 @@ animation: s 1.5s linear infinite;
             </div>
         </nav>
         <script>
-            portfolio1.onclick= function(){
+            portfolio1.onclick = function () {
                 portfolioBar.className = 'bar state-1'
             }
-            portfolio2.onclick= function(){
+            portfolio2.onclick = function () {
                 portfolioBar.className = 'bar state-2'
             }
-            portfolio3.onclick= function(){
+            portfolio3.onclick = function () {
                 portfolioBar.className = 'bar state-3'
             }
         </script>
@@ -218,16 +245,19 @@ animation: s 1.5s linear infinite;
                 <img src="./image/1.jpg" alt="作品1">
             </div>
             <div class="small" style="top: 0;left:644px;">
-                    <img src="./image/2.jpg" alt="作品2">
+                <img src="./image/2.jpg" alt="作品2">
             </div>
             <div class="small" style="top: 298.4px; left:644px;">
-                    <img src="./image/3.jpg" alt="作品3">
+                <img src="./image/3.jpg" alt="作品3">
             </div>
         </div>
 
     </section>
     <script>
-        siteWelcome.classList.remove('active')
+        setTimeout(function(){
+            siteWelcome.classList.remove('active')
+        },1000)
     </script>
 </body>
+
 </html>
