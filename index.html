@@ -264,6 +264,7 @@
         </div>
 
     </section>
+    <script src="tween.umd.js"></script>
     <script>
         setTimeout(function () {
             siteWelcome.classList.remove('active')
@@ -287,31 +288,31 @@
         }
 
         let aTags = document.querySelectorAll('nav.menu > ul > li > a')
-        for (let i=0; i<aTags.length; i++){
-            aTags[i].onclick = function(x){
+        function animate(time) {
+            requestAnimationFrame(animate)
+            TWEEN.update(time)
+        }
+        requestAnimationFrame(animate)
+        for (let i = 0; i < aTags.length; i++) {
+            aTags[i].onclick = function (x) {
                 x.preventDefault() //阻止默认动作
                 let a = x.currentTarget //获取到用户点击的a标签
                 let href = a.getAttribute('href') //获取a标签上的href-'#siteAbout'
                 let element = document.querySelector(href) //根据href，获得这个href所在的元素
                 let top = element.offsetTop //得到这个元素element距离页面最上边的距离
 
-                let n = 25
-                let duration = 500 / n
                 let currentTop = window.scrollY
                 let targetTop = top - 80
-                let distance = (targetTop - currentTop) / n
-                let i = 0
-                let id = setInterval(()=> {
-                    if(i===n){
-                        window.clearInterval(id)
-                        return
-                    }
-                    i = i + 1
-                    window.scrollTo(0, currentTop + distance * i)
-                },duration)
-                //window.scrollTo(0,top - 80) //让window进行滑动
+                const coords = { y: currentTop } // Start at (0, targetTop)
+                const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
+                    .to({ y: targetTop }, 1000) // Move to (0 targetTop) in 1 second.
+                    .easing(TWEEN.Easing.Quadratic.InOut) // Use an easing function to make the animation smooth.
+                    .onUpdate(function () {
+                        window.scrollTo(0, coords.y)
+                    })
+                    .start() // Start the tween immediately.
             }
-        }
+        } 
     </script>
 </body>
 
